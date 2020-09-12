@@ -12,8 +12,10 @@ This a BAREBONE Pokemon Unity with no demo, sprite, texture, maps, and etc. Just
 
 Known Bug
 * Encounter scripts error (Just move the scripts out and it will resolve the error)
+* You might get error about TMP_AnimatedEdtior (Just move the scripts out and it will resolve the error)
 * Pokemon stats (Health and Level)
 * other fews bugs
+
 
 ## Summary 
  
