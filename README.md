@@ -1,5 +1,5 @@
 <p align="center">
-  <h1 align="center">Pokémon Framework with Unity (not __FOR__ Unity -- Important Distinction) by Herbert Milhomme</h1>
+  <h1 align="center">BareBone-Pokémon Framework with Unity (not __FOR__ Unity -- Important Distinction) by Herbert Milhomme</h1>
   <p align="center">
     <a href="https://opensource.org/licenses/BSD-3-Clause"><img alt="License" src="https://img.shields.io/badge/license-New%20BSD-blue.svg"/></a>
     <a href="https://herbertmilhomme.github.io/PokemonUnity/"><img alt="GitBook" src="https://img.shields.io/badge/view%20docs%20on-gitbook-blue.svg"/></a>
@@ -7,11 +7,20 @@
   </p>
 </p>
 
+## BareBone Pokemon Framework
+
+This a BAREBONE Pokemon Unity with no demo, sprite, texture, maps, and etc. Just FRAMEWORK. Will keep this update as [Herbert Hilhomme update the Pokemon Unity Framework](https://github.com/herbertmilhomme/PokemonUnity). 
+
+Known Bug
+* Encounter scripts error (Just move the scripts out and it will resolve the error)
+* Pokemon stats (Health and Level)
+* other fews bugs
+
 ## Summary 
  
 Pokémon Framework is a framework written in C-Sharp and designed to be built on top of, as a foundation and key component in any Pokémon remake or emulator. Because the project is so loosely coupled from any frontend component, it allows for the project to easily migrate between any engine or platform that's C# compatible (i.e. Unity3d, Websites/ASP.Net, or even commandline console, as a text based Pokémon battle simulator).
 
-This contains a C# port of [Pokémon Essentials](https://github.com/griest024/essentials-sample-project) (extension package for RPG Maker MV, which is written in Ruby), that I authored myself. Since Ruby follows similar object-oriented coding structures, it's easy to mirror the code to function the same (with very few and minor differences). 
+This contains a C# port of [Pokémon Essentials](https://github.com/griest024/essentials-sample-project) (extension package for RPG Maker MV, which is written in Ruby), that I authored myself. Since Ruby follows similar object-oriented coding structures, it's easy to mirror the code to function the same (with very few and minor differences). [Docs for Pokémon Essentials](https://essentialsdocs.fandom.com/wiki/Essentials_Docs_Wiki)
 
 I have changed so much of the original [Pokémon Unity](https://github.com/PokemonUnity/PokemonUnity) code on the backend that this project runs and functions more like pokemon essentials, but with pokemon unity assets on frontend as a wrapper. I swapped out all of the data from Pokemon Essentials to use [Veekun's Database](https://github.com/veekun/pokedex), which is more expansive (more detailed, regularyly kept up-to-date, and formatted for database queries by default.
 
@@ -36,6 +45,7 @@ All of the global enums are stored in a single directory, so that they're easily
 Anything that ends in an "S" is most likely an `Enum`. `PokemonUnity.Pokemons` is an enum of Pokemon. (It will list all the individual pokemons in pokedex with their given IDs).
 
 ## Credits
+Herbertmilhomme
 ### Links
 
 * Project Board: [Not Frequently Used or Updated](https://github.com/herbertmilhomme/PokemonUnity/projects/1)
