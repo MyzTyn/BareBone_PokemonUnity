@@ -44,7 +44,7 @@ All of the global enums are stored in a single directory, so that they're easily
 Anything that ends in an "S" is most likely an `Enum`. `PokemonUnity.Pokemons` is an enum of Pokemon. (It will list all the individual pokemons in pokedex with their given IDs).
 
 ## Credits
-Herbertmilhomme
+
 ### Links
 
 * Project Board: [Not Frequently Used or Updated](https://github.com/herbertmilhomme/PokemonUnity/projects/1)
