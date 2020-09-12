@@ -8,7 +8,7 @@
 
 ## BareBone Pokemon Framework
 
-This a BAREBONE Pokemon Unity with no demo, sprite, texture, maps, and etc. Just FRAMEWORK with pokemon logic. Will keep this update as [Herbert Hilhomme update the Pokemon Unity Framework](https://github.com/herbertmilhomme/PokemonUnity). 
+This a BAREBONE Pokemon Unity with no demo, sprite, texture, maps, and etc. Just FRAMEWORK with pokemon logic. Will keep this update as [Herbert Hilhomme update the Pokemon Unity Framework](https://github.com/herbertmilhomme/PokemonUnity). This has a empty database so you need to maunal add whole the database.
 
 Known Bug
 * Encounter scripts error (Just move the scripts out and it will resolve the error)
