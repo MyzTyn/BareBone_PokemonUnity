@@ -51,7 +51,7 @@ Anything that ends in an "S" is most likely an `Enum`. `PokemonUnity.Pokemons` i
 ### Links
 
 * Project Board: [Not Frequently Used or Updated](https://github.com/herbertmilhomme/PokemonUnity/projects/1)
-* Documentation: [Pokemon Essentials Wiki](http://pokemonessentials.wikia.com/wiki/Pok%C3%A9mon_Essentials_Wiki) (or [My poorly written Github wiki](https://herbertmilhomme.github.io/PokemonUnity/))
+* Documentation: [Pokemon Essentials Wiki](https://essentialsdocs.fandom.com/wiki/Essentials_Docs_Wiki) (or [My poorly written Github wiki](https://herbertmilhomme.github.io/PokemonUnity/))
 * Documentation-Repo: [Github Pages Repo](https://github.com/herbertmilhomme/PokemonUnity/tree/gh-pages)
 * Database: [Veekun's Pokedex Github](https://github.com/veekun/pokedex)
 * Web-Server: TBD
