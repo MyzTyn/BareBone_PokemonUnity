@@ -16,7 +16,8 @@ public class PokemonUnityTool : EditorWindow {
     Pokemons pokemons;
     string Male = "♂";
     string Female = "♀";
-    string HealthWithMax = null;
+    //string HealthWithMax = null;
+    string HealthWithMax { get {return string.Format("{0}/{1}", HP, MaxHP); } } 
     //Pokemon Stats Viewer
     byte ByteLevel; //For Pokemon Level
     int IntLevel; //For changing the values.
@@ -222,7 +223,7 @@ public class PokemonUnityTool : EditorWindow {
             {
                 Types = string.Concat(type1.ToString() + "    " + type2.ToString());
             }
-            HealthWithMax = string.Concat(HP,"/",MaxHP); //So it will show as CurrentHP/MaxHealth
+            //HealthWithMax = string.Concat(HP,"/",MaxHP); //So it will show as CurrentHP/MaxHealth
         }
     }
     void GUI_Read_Database()
