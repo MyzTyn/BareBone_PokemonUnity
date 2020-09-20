@@ -13,7 +13,6 @@ If you want the Bolt Visual Scripting then you should go this [repo](https://git
 
 Known Bug
 * Encounter scripts error (Just move the scripts out and it will resolve the error)
-* You might get error about TMP_AnimatedEdtior (Just move the scripts out and it will resolve the error)
 * Pokemon stats (Health and Level)
 * other fews bugs
 
