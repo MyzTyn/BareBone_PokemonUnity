@@ -65,7 +65,7 @@ public class PokeBattle_BattlePalace : Battle {
     42, 5,53,
     56,22,22
   };
-  public PokeBattle_BattlePalace(IPokeBattle_Scene scene, Monster.Pokemon[] p1, Monster.Pokemon[] p2, Trainer[] player, Trainer[] opponent) : base (scene, p1, p2, player, opponent) { 
+  public PokeBattle_BattlePalace(IPokeBattle_Scene scene, Monster.Pokemon[] p1, Monster.Pokemon[] p2, Combat.Trainer[] player, Combat.Trainer[] opponent) : base (scene, p1, p2, player, opponent) { 
   //public void initialize() {
     //base.this();
     @justswitched=new bool[] { false, false, false, false };
@@ -126,7 +126,7 @@ public class PokeBattle_BattlePalace : Battle {
          nature==Natures.HARDY||
          nature==Natures.DOCILE||
          nature==Natures.SERIOUS) {
-        pbDisplay(_INTL("{1} is eager for more!",thispkmn.ToString()));
+        pbDisplay(Game._INTL("{1} is eager for more!",thispkmn.ToString()));
       }
       if (nature==Natures.CAREFUL||
          nature==Natures.RASH||
@@ -134,7 +134,7 @@ public class PokeBattle_BattlePalace : Battle {
          nature==Natures.SASSY||
          nature==Natures.MILD||
          nature==Natures.TIMID) {
-        pbDisplay(_INTL("{1} began growling deeply!",thispkmn.ToString()));
+        pbDisplay(Game._INTL("{1} began growling deeply!",thispkmn.ToString()));
       }
       if (nature==Natures.GENTLE||
          nature==Natures.ADAMANT||
@@ -142,7 +142,7 @@ public class PokeBattle_BattlePalace : Battle {
          nature==Natures.LONELY||
          nature==Natures.RELAXED||
          nature==Natures.NAUGHTY) {
-        pbDisplay(_INTL("A glint appears in {1}'s eyes!",thispkmn.ToString(true)));
+        pbDisplay(Game._INTL("A glint appears in {1}'s eyes!",thispkmn.ToString(true)));
       }
       if (nature==Natures.JOLLY||
          nature==Natures.BOLD||
@@ -150,7 +150,7 @@ public class PokeBattle_BattlePalace : Battle {
          nature==Natures.CALM||
          nature==Natures.IMPISH||
          nature==Natures.MODEST) {
-        pbDisplay(_INTL("{1} is getting into position!",thispkmn.ToString()));
+        pbDisplay(Game._INTL("{1} is getting into position!",thispkmn.ToString()));
       }
     }
   }
@@ -173,7 +173,7 @@ public class PokeBattle_BattlePalace : Battle {
       int maxindex=-1;
       int maxpercent=0;
       int factor=0;
-      Pokemon[] party=pbParty(index);
+      Monster.Pokemon[] party=pbParty(index);
       for (int i = 0; i < party.Length; i++) {
         if (pbCanSwitch(index,i,false)) {
           percents[i]=party[i].HP*100/party[i].TotalHP;
@@ -190,7 +190,7 @@ public class PokeBattle_BattlePalace : Battle {
         factor=(maxpercent<hppercent) ? 20 : 40;
       }
       if (hppercent<25) {
-        factor=(maxpercent<hppercent) ? 30 : 50   ;
+        factor=(maxpercent<hppercent) ? 30 : 50;
       }
       if (@battlers[index].Status==Status.BURN ||
          @battlers[index].Status==Status.POISON) {
@@ -215,7 +215,7 @@ public class PokeBattle_BattlePalace : Battle {
     }
     @justswitched[index]=shouldswitch;
     if (shouldswitch) {
-      Pokemon[] party=pbParty(index);
+      Monster.Pokemon[] party=pbParty(index);
       for (int i = 0; i < party.Length; i++) {
         if (pbCanSwitch(index,i,false)) {
           pbRegisterSwitch(index,i);

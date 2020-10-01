@@ -34,7 +34,7 @@ namespace PokemonUnity
 	public partial class Game
 	{
 		#region Variables
-		const string FilePokemonXML = "";
+		public static string FilePokemonXML = "";
 		public static Dictionary<Pokemons, PokemonUnity.Monster.Data.PokemonEvolution[]> PokemonEvolutionsData { get; private set; }
 		public static Dictionary<Pokemons, PokemonUnity.Monster.Data.PokemonWildItems[]> PokemonItemsData { get; private set; }
 		public static Dictionary<Pokemons, PokemonUnity.Monster.Data.Form[]> PokemonFormsData { get; private set; }
@@ -68,7 +68,7 @@ namespace PokemonUnity
 		/// </summary>
 		public static Dictionary<int,EncounterData> EncounterData { get; private set; }
 		//public static Dictionary<Method,EncounterData> EncounterMethodData { get; private set; }
-		public static Dictionary<TrainerTypes,TrainerData> TrainerMetaData { get; private set; }
+		public static Dictionary<TrainerTypes,TrainerMetaData> TrainerMetaData { get; private set; }
 		public static Dictionary<GymBadges,Character.BadgeData> BadgeData { get; private set; }
 		public static Dictionary<HiddenMoves,HiddenMoveData> HiddenMoveData { get; private set; }
 		public static Dictionary<int,MachineData> MachineData { get; private set; }
@@ -198,7 +198,7 @@ namespace PokemonUnity
 		}
 		public static bool InitTrainers(bool sql = false)
 		{
-			TrainerMetaData = new Dictionary<TrainerTypes, TrainerData>();
+			TrainerMetaData = new Dictionary<TrainerTypes, TrainerMetaData>();
 			//TrainerData = new Dictionary<int, Encounter>();
 			if (sql) //using (con)
 				return false; //GetTrainersFromSQL(con);
@@ -222,7 +222,7 @@ namespace PokemonUnity
 		}
 		//public static bool InitLoadFile(bool sql = true)
 		//{
-		//	TrainerMetaData = new Dictionary<TrainerTypes, TrainerData>();
+		//	TrainerMetaData = new Dictionary<TrainerTypes, TrainerMetaData>();
 		//	//TrainerData = new Dictionary<int, Encounter>();
 		//	if (sql) //using (con)
 		//		return GetTrainersFromSQL(con);
@@ -333,7 +333,7 @@ namespace PokemonUnity
 						case Effects.NONE:
 							break;
 						case Effects.x001:
-							MoveEffectData.Add(effect, new Combat.PokeBattle_Move_12D());
+							MoveEffectData.Add(effect, new Combat.PokeBattle_Move_000());
 							break;
 						case Effects.x002:
 							MoveEffectData.Add(effect, new Combat.PokeBattle_Move_003());
@@ -494,6 +494,7 @@ namespace PokemonUnity
 							MoveEffectData.Add(effect, new Combat.PokeBattle_Move_04C());
 							break;
 						case Effects.x03D:
+							MoveEffectData.Add(effect, new Combat.PokeBattle_Move_04D());
 							break;
 						case Effects.x03E:
 							MoveEffectData.Add(effect, new Combat.PokeBattle_Move_13D());
@@ -560,7 +561,7 @@ namespace PokemonUnity
 							MoveEffectData.Add(effect, new Combat.PokeBattle_Move_001());
 							break;
 						case Effects.x057:
-							MoveEffectData.Add(effect, new Combat.PokeBattle_Move_057());
+							MoveEffectData.Add(effect, new Combat.PokeBattle_Move_0B9());
 							break;
 						case Effects.x058:
 							MoveEffectData.Add(effect, new Combat.PokeBattle_Move_06D());
@@ -887,7 +888,7 @@ namespace PokemonUnity
 							MoveEffectData.Add(effect, new Combat.PokeBattle_Move_03F());
 							break;
 						case Effects.x0CE:
-							MoveEffectData.Add(effect, new Combat.PokeBattle_Move_0A4());
+							MoveEffectData.Add(effect, new Combat.PokeBattle_Move_04A());
 							break;
 						case Effects.x0CF:
 							MoveEffectData.Add(effect, new Combat.PokeBattle_Move_02A());
@@ -1021,6 +1022,7 @@ namespace PokemonUnity
 							MoveEffectData.Add(effect, new Combat.PokeBattle_Move_104());
 							break;
 						case Effects.x0FB:
+							MoveEffectData.Add(effect, new Combat.PokeBattle_Move_054());
 							break;
 						case Effects.x0FC:
 							MoveEffectData.Add(effect, new Combat.PokeBattle_Move_0DA());
@@ -1496,6 +1498,9 @@ namespace PokemonUnity
 						case Effects.x1A4:
 							break;
 						case Effects.x711:
+							//126	No effect.	Shadow Blast, Shadow Blitz, Shadow Break, Shadow Rave, Shadow Rush, Shadow Wave
+							//Effect x711 is only used by Shadow Rush... the others just deal regular damage, with no additional effects 
+							MoveEffectData.Add(effect, new Combat.PokeBattle_Move_126());
 							break;
 						case Effects.x712:
 							MoveEffectData.Add(effect, new Combat.PokeBattle_Move_130());
@@ -1788,7 +1793,7 @@ namespace PokemonUnity
 							break;
 					}
 					#endregion
-					TrainerMetaData.Add(type, new TrainerData(
+					TrainerMetaData.Add(type, new TrainerMetaData(
 							id: type
 							, @double: doubel
 							, baseMoney: BaseMoney
@@ -2149,7 +2154,7 @@ namespace PokemonUnity
 								)
 							);
 							//foreach(var gen in new int[] { int.Parse((string)reader["ReDex"].ToString()) }) { PokedexData.Add(); }
-					}
+						}
 					//}
 					//Step 5: Closing up
 					reader.Close();
