@@ -12,9 +12,7 @@ This a BAREBONE Pokemon Unity with no demo, sprite, texture, maps, and etc. Just
 If you want the Bolt Visual Scripting then you should go this [repo](https://github.com/MyzTyn/BareBone-PokemonUnity_Bolt)
 
 Known Bug
-* Encounter scripts error (Just move the scripts out and it will resolve the error)
-* Pokemon stats (Health and Level)
-* other fews bugs
+*None so far. 
 
 
 ## Summary 
