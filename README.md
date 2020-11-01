@@ -6,13 +6,12 @@
   </p>
 </p>
 
+This repo has archive because You can directly download from Herbertmilhomme's PokemonUnity and drag dll to empty project. Here [link](https://github.com/herbertmilhomme/PokemonUnity) 
+
 ## BareBone Pokemon Framework
 
 This a BAREBONE Pokemon Unity with no demo, sprite, texture, maps, and etc. Just FRAMEWORK with pokemon logic. Will keep this update as [Herbert Hilhomme update the Pokemon Unity Framework](https://github.com/herbertmilhomme/PokemonUnity). This has a empty database so you need to maunal add whole the database.
-If you want the Bolt Visual Scripting then you should go this [repo](https://github.com/MyzTyn/BareBone-PokemonUnity_Bolt)
 
-Known Bug
-*None so far. 
 
 
 ## Summary 
